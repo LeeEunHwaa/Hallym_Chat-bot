@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .ChatInpuDiv {
   display: flex;
   justify-content: center;
@@ -6,35 +10,55 @@
   background-color: aliceblue;
 }
 .chat-character {
+  height: 45vh;
+  padding-top: 6vh;
   position: absolute;
   outline: none;
   border: 0;
-  -webkit-mask-image: -webkit-radial-gradient(white, black);
-  -webkit-backface-visibility: hidden;
+  mask-image: -webkit-radial-gradient(white, black);
+  backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   z-index: 1;
+  @media (max-width: 500px) {
+    height: 40vh;
+    padding-top: 4vh;
+  }
+}
+
+.chat-character embed,
+.chat-character object {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .chat-window {
   display: flex;
-  position: absolute;
+  position: relative;
   overflow-y: hidden;
   width: 100%;
-  height: 92vh;
-  top: 70px;
+  background-color: white;
+  height: calc(var(--vh, 1vh) * 100);
+  /* @media (max-width: 768px) {
+    height: 94vh;
+  } */
 }
 
 .chat-messages {
-  height: 480px;
+  position: absolute;
+  top: 45vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
   overflow-y: scroll;
   flex: 1;
   padding: 8px;
-  position: relative;
-  top: 280px;
+  bottom: 55px;
   z-index: 0;
+  @media (max-width: 500px) {
+    top: 36vh;
+  }
 }
 
 .chat-messages::-webkit-scrollbar {
@@ -59,24 +83,31 @@
 }
 
 .chat-input {
-  min-width: 360px;
   position: absolute;
+  height: 55px;
   display: flex;
   width: 100%;
   bottom: 0;
+  margin-bottom: 10px;
   z-index: 10;
   box-sizing: border-box;
   padding: 10px;
-  background-color: #f5f5ff;
+  background-color: white;
+  @media (max-width: 639px) {
+    margin-left: 10px;
+  }
 }
 
 .chat-input input {
+  position: relative;
   padding: 10px;
   border: 1px solid #ccc;
-  width: calc(100% - 65px);
-  height: 20px;
+  width: calc(100% - 85px);
   border-radius: 10px;
   outline: none;
+  @media (max-width: 639px) {
+    width: calc(100% - 55px);
+  }
 }
 
 .chat-input input:focus {
@@ -84,7 +115,7 @@
 }
 
 .chat-input button {
-  background-color: #f5f5ff;
+  background-color: white;
   cursor: pointer;
   border: none;
   margin-left: 10px;

@@ -32,12 +32,14 @@ public class UserController{
         String nextPage;
         UserEntity user = userService.loginConfirm(uID, uPW);
         if(user != null){
-            //System.out.println(String.format("# uID : %s , uPW : %s", uID, uPW));
             user.printUser();
             nextPage = "home";
             HttpSession session = request.getSession();
-            session.setAttribute("uID", uID);
-            System.out.println(String.format("# session { uID : %s }", session.getAttribute("uID")));
+            session.setAttribute("uID", user.getuID());
+            session.setAttribute("uPW", user.getuPW());
+            session.setAttribute("uName", user.getuName());
+            session.setAttribute("uMajor", user.getuMajor());
+            session.setAttribute("uDoubleMajor", user.getuDoubleMajor());
         }else{
             nextPage = "user/login";
         }
@@ -45,7 +47,19 @@ public class UserController{
         if(nextPage.equals("home")) System.out.println("# 로그인 성공");
         else System.out.println("# 로그인 실패");
         //return nextPage;
-        //return "test";
+        response.sendRedirect("");
+    }
+
+    // 로그아웃
+    
+    @GetMapping("/logout-confirm")
+    public void logoutConfirm(HttpServletRequest request, HttpServletResponse response) throws IOException{
+        HttpSession session = request.getSession();
+            session.setAttribute("uID",null);
+            session.setAttribute("uPW", null);
+            session.setAttribute("uName", null);
+            session.setAttribute("uMajor", null);
+            session.setAttribute("uDoubleMajor", null);
         response.sendRedirect("");
     }
 

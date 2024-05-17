@@ -1,21 +1,13 @@
 import PropTypes from "prop-types"; // PropTypes를 임포트합니다.
 import Modal from "react-modal";
 import SignupPage from "../Login/SignupPage";
+import "./Modal.css";
 
 const MyModal2 = ({ isOpen, onCancel }) => {
   const customStyles = {
     overlay: {
       zIndex: 1000,
       backgroundColor: "#00000070",
-    },
-    content: {
-      height: "400px",
-      width: "400px",
-      inset: "unset",
-      margin: "50vh auto",
-      padding: 0,
-      transform: "translateY(-50%)",
-      position: "relative",
     },
   };
 
@@ -24,11 +16,13 @@ const MyModal2 = ({ isOpen, onCancel }) => {
   };
 
   return (
-    <Modal isOpen={isOpen} style={customStyles}>
-      <SignupPage />
-      <div>
-        <button onClick={handleClickCancel}>닫기</button>
-      </div>
+    <Modal
+      isOpen={isOpen}
+      style={customStyles}
+      className="modal-content2"
+      onRequestClose={handleClickCancel}
+    >
+      <SignupPage handleClickCancel={handleClickCancel} />
     </Modal>
   );
 };

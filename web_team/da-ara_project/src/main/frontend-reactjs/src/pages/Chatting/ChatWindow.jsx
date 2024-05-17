@@ -1,39 +1,73 @@
-import { useState, useRef } from "react";
-import axios from "axios";
+import { useState, useRef, useEffect } from "react";
 import ChatMessage from "./ChatMessage";
 import ChatInput from "./ChatInput";
 
-const ChatWindow = () => {
-  const [messages, setMassages] = useState([]);
+const ChatWindow = ({ isVoiceEnabled }) => {
+  const [messages, setMessages] = useState([]);
   const inputElem = useRef(null);
+  const messagesEndRef = useRef(null);
 
-  const addMessage = (message, isUser) => {
-    setMassages((prevMessages) => [...prevMessages, { text: message, isUser }]);
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
+  useEffect(() => {
+    requestAnimationFrame(() => {
+      scrollToBottom();
+    });
+  }, [messages]);
+
+  const addMessage = (message, isUser) => {
+    setMessages((prevMessages) => [...prevMessages, { text: message, isUser }]);
+  };
+
+  function speak(text) {
+    if (isVoiceEnabled) {
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = "ko-KR";
+      utterance.rate = 1;
+      speechSynthesis.speak(utterance);
+    }
+  }
+
   const handleSubmit = async (message) => {
-    //사용자 메시지를 추가합니다.
-    addMessage(message, true);
-    inputElem.current.focus();
+    addMessage(message, true); // 사용자 메시지 추가
+    if (inputElem.current) {
+      inputElem.current.focus();
+    }
 
     try {
-      // 백엔드 서버와 통신하여 GPT의 응답을 받습니다.
-      const response = await axios.post("http://localhost:8080/ask", {
-        prompt: message,
-      });
-
-      //GPT로부터 받은 응답을 채팅창에 추가합니다.
-      if (response.data) {
-        addMessage(response.data, false);
-      }
+      const response = await fetch("http://127.0.0.1:5000/api/data", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ userMessage: message }),
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("네트워크 오류");
+          }
+          return response.json();
+        })
+        .then((data) => {
+          console.log(data);
+          return data;
+        })
+        .catch((error) => {
+          console.error("에러 발생:", error);
+          throw error;
+        });
+      //
+      const myJson = await response;
+      speak(myJson["text"]);
+      addMessage(myJson["text"], false); // API로부터 받은 메시지를 직접 채팅에 추가
     } catch (error) {
       console.error("Error fetching GPT response:", error);
+      addMessage("Failed to fetch response.", false); // 에러 메시지를 채팅에 추가
     }
   };
 
-  // 동영상 경로
-  // - 자바 : "../video/character.mp4"
-  // - 리액트 : "../../../public/video/character.mp4"
   return (
     <div className="chat-window">
       <video
@@ -41,21 +75,25 @@ const ChatWindow = () => {
         loop
         muted
         width="100%"
-        height="280px"
         className="chat-character"
+        poster="/spinnerImg.png"
       >
-        <source src="/video/newchar1.mp4" type="video/mp4" />
+        <source src="/video/defchar.mp4" type="video/mp4" />
       </video>
 
-      <div className="chat-messages">
-        {messages.map((message, index) => (
-          <ChatMessage
-            key={index}
-            message={message.text}
-            isUser={message.isUser}
-          />
-        ))}
-      </div>
+      <form action="saveChatRecord" method="post" style={{ width: "100%" }}>
+        <div className="chat-messages">
+          {messages.map((message, index) => (
+            <ChatMessage
+              key={index}
+              message={message.text}
+              isUser={message.isUser}
+            />
+          ))}
+          <div ref={messagesEndRef} />
+        </div>
+      </form>
+
       <ChatInput onSubmit={handleSubmit} />
     </div>
   );

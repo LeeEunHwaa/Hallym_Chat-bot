@@ -4,11 +4,9 @@ import { FiMenu } from "react-icons/fi";
 import styled from "styled-components";
 
 const Button = styled.button`
-  position: absolute;
   border: 0;
   background-color: transparent;
   float: left;
-  left: 10px;
   cursor: pointer;
 `;
 
@@ -24,7 +22,7 @@ function SideBar() {
   return (
     <div>
       <Button onClick={openModalHandler}>
-        <FiMenu size="40" />
+        <FiMenu size="40" color="#fff" />
       </Button>
       <Menu isOpen={isOpen} onCancel={handleModalCancel} />
     </div>

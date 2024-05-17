@@ -1,11 +1,98 @@
 import { useState } from "react";
 import Select from "react-select";
+import styled from "styled-components";
+import { MdCancel } from "react-icons/md";
+import "../../assets/fonts/fonts.css";
 
-const SignupPage = () => {
+const Form = styled.div`
+  width: 80%;
+  margin: auto;
+  background-color: #d5e2f2;
+  border-radius: 11px;
+`;
+const Loginform = styled.form`
+  display: grid;
+  row-gap: 13px;
+`;
+const StyledSelect = styled(Select)`
+  width: 90%;
+  margin: 0 auto;
+`;
+// const H2 = styled.h2`
+//   font-size: 50px;
+//   text-align: center;
+//   font-family: "BagleFatOne";
+//   color: #fff;
+//   -webkit-text-stroke: 1px #9a96c8;
+// `;
+const ButtonForm = styled.div`
+  background-color: #d5e2f2;
+  color: white;
+  align-self: end;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+`;
+const Button = styled.button`
+  background-color: #a0bbf2;
+  width: 90%;
+  color: black;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  margin: 0 2px;
+  padding: 10px 24px;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 15px;
+  font-family: "NanumSquareRoundEB";
+  &:hover {
+    background-color: #5576d9;
+    color: white;
+  }
+`;
+const CloseButton = styled.button`
+  margin: 5px;
+  // float: right;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 11px;
+  color: #a0bbf2;
+  background-color: #d5e2f2;
+`;
+const Label = styled.label`
+  padding-left: 2rem;
+  display: block;
+  font-family: "NanumSquareRoundR";
+`;
+const Input = styled.input`
+  width: 90%;
+  margin: 0 auto; /* Add this line */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem;
+  border-radius: 9px;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+`;
+const P = styled.p`
+  padding-left: 0.5rem;
+  font-family: "NanumSquareRoundR";
+`;
+
+const SignupPage = ({ handleClickCancel }) => {
   const [usernumber, setUsernumber] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [pwdErrorMsg, setPwdErrorMsg] = useState("");
+  const [selectedMajor, setSelectedMajor] = useState(null);
 
   // 비밀번호 정규식
   const passwordNumber = /^[A-Za-z0-9]{8,20}$/;
@@ -89,49 +176,68 @@ const SignupPage = () => {
     { value: "공공인재융합전공", label: "공공인재융합전공" },
   ];
 
+  const handleMajorChange = (selectedOption) => {
+    setSelectedMajor(selectedOption);
+  };
+
   return (
-    <form action="/signup-confirm" className="login-box" method="post">
-      <p>
-        반가워요! 성명,학번, 비밀번호를 <br />
-        입력해주세요. 😀
-      </p>
-      <input
-        onChange={(e) => {
-          setUsername(e.target.value);
-        }}
-        placeholder="성명"
-        value={username}
-        name="uName"
-        type="text"
-      ></input>
-      <input
-        onChange={(e) => {
-          setUsernumber(e.target.value);
-        }}
-        placeholder="학번"
-        value={usernumber}
-        name="uID"
-        type="text"
-      ></input>
-      <br />
-      <input
-        onChange={(e) => {
-          setPassword(e.target.value);
-          passwordCheck(e.target.value);
-        }}
-        placeholder="비밀번호"
-        value={password}
-        type="password"
-        name="uPW"
-      ></input>
-      <br />
-      {pwdErrorMsg && <p style={{ color: "green" }}>{pwdErrorMsg}</p>}
-      <p>비밀번호는 영문 대소문자, 숫자를 혼합하여 8~20자로 입력해주세요</p>
-      <Select options={options} placeholder="학과를 입력(선택)해주세요..." name="uMajor" />
-      <button type="submit" disabled={!(username && password && usernumber)}>
-        회원가입 완료
-      </button>
-    </form>
+    <Form>
+      <CloseButton onClick={handleClickCancel}>
+        <MdCancel size={30} />
+      </CloseButton>
+      <Loginform action="/signup-confirm" method="post">
+        {/* <H2>DA-ARA</H2> */}
+        <Label>성명</Label>
+        <Input
+          onChange={(e) => {
+            setUsername(e.target.value);
+          }}
+          placeholder="성명"
+          value={username}
+          name="uName"
+          type="text"
+        ></Input>
+        <Label>학번</Label>
+        <Input
+          onChange={(e) => {
+            setUsernumber(e.target.value);
+          }}
+          placeholder="학번"
+          value={usernumber}
+          name="uID"
+          type="text"
+        ></Input>
+        <Label>비밀번호</Label>
+        <Input
+          onChange={(e) => {
+            setPassword(e.target.value);
+            passwordCheck(e.target.value);
+          }}
+          placeholder="비밀번호"
+          value={password}
+          type="password"
+          name="uPW"
+        ></Input>
+        {pwdErrorMsg && <p style={{ color: "green" }}>{pwdErrorMsg}</p>}
+        <P>영문 대소문자, 숫자를 혼합하여 8~20자로 입력</P>
+        <StyledSelect
+          onChange={handleMajorChange}
+          options={options}
+          value={selectedMajor}
+          getOptionLabel={(option) => option.label}
+          placeholder="학과를 입력(선택)해주세요..."
+          name="uMajor"
+        />
+        <ButtonForm>
+          <Button
+            type="submit"
+            disabled={!(username && password && usernumber && selectedMajor)}
+          >
+            회원가입
+          </Button>
+        </ButtonForm>
+      </Loginform>
+    </Form>
   );
 };
 
