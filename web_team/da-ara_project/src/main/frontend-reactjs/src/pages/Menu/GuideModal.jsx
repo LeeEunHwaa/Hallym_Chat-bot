@@ -1,5 +1,5 @@
 import Modal from "react-modal";
-import "./Modal.css";
+// import "./Modal.css";
 import Guide from "./Guide";
 
 const GuideModal = ({ isOpen, onCancel }) => {
@@ -21,7 +21,7 @@ const GuideModal = ({ isOpen, onCancel }) => {
       className="modal-content"
       onRequestClose={handleClickCancel}
     >
-      <Guide />
+      <Guide handleClickCancel={handleClickCancel} />
     </Modal>
   );
 };
