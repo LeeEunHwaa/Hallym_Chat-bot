@@ -118,7 +118,20 @@ fine-tunning code &darr;
 
 -------------------
 
+#### 팀원소개
 
+<table>
+  <tbody>
+    <tr>
+      <td align="center"><a href="https://github.com/Kimsuyeon0809"><img src="width="100px;" alt=""/><br /><sub><b>팀장 : 김수연 </b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/Gawon77"><img src="" width="100px;" alt=""/><br /><sub><b>팀원 : 이가원 </b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/LeeEunHwaa"><img src="" width="100px;" alt=""/><br /><sub><b>팀원 : 이은화 </b></sub></a><br /></td>
+     <tr/>
+      <td align="center"><a href="https://github.com/gwonbe"><img src="" width="100px;" alt=""/><br /><sub><b>팀원 : 신유진 </b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/YerinJi"><img src="" width="100px;" alt=""/><br /><sub><b>팀원 : 지예 </b></sub></a><br /></td>
+    </tr>
+  </tbody>
+</table>
 
 
 
