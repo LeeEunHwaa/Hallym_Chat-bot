@@ -40,14 +40,16 @@
 
  Koalpaca의 크기가 커서 로컬에서 진행하기에는 큰 한계가 있습니다. 본 프로젝트에서는 구글 코랩(Colab) 프로 플러스 버전의 A100 GPU를 사용했습니다.
 
-fine-tunning code &rarr; <https://drive.google.com/file/d/1sGJOqHJOOthNo5KTPrjZZo14y-zLNzCf/view?usp=sharing>
+fine-tunning code &rarr; 
+<a style='display:inline' target="_blank" href="https://drive.google.com/file/d/1sGJOqHJOOthNo5KTPrjZZo14y-zLNzCf/view?usp=sharing">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
 
 #### 3-1. 허깅페이스에 올린 모델 다시 로드
 
  파인튜닝하여 허깅페이스에 업로드한 모델을 다시 불러와 테스트합니다.
 
- model load test code &rarr; <https://colab.research.google.com/drive/1XlfRxnlC1dmt2HoMj4BoVJiNLurVvWre?usp=sharing>
-
+ model load test code &rarr; 
 <a style='display:inline' target="_blank" href="https://colab.research.google.com/drive/1XlfRxnlC1dmt2HoMj4BoVJiNLurVvWre?usp=sharing">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
