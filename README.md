@@ -33,7 +33,7 @@
    - 5.8B 개의 파라미터를 가지고 있으며, Bloom모델을 기반으로 한국어와 다양안 언어로 추가 학습되었다.
    - 토크나이저의 크기는 32,000으로 다양한 언어와 어휘를 포괄한다.
      
-<<https://huggingface.co/beomi/KoAlpaca-Polyglot-5.8B>>
+🤗<https://huggingface.co/beomi/KoAlpaca-Polyglot-5.8B>
 
 ----------------
 ### 3. Fine-tunning
@@ -48,8 +48,12 @@ fine-tunning code &rarr; <https://drive.google.com/file/d/1sGJOqHJOOthNo5KTPrjZZ
 
  model load test code &rarr; <https://colab.research.google.com/drive/1XlfRxnlC1dmt2HoMj4BoVJiNLurVvWre?usp=sharing>
 
+ <a style='display:inline' target="_blank" href="[https://colab.research.google.com/github/Beomi/KoAlpaca/blob/main/2023_06_08_PEFT%EB%A1%9CLoRA%EB%A1%9C%EB%93%9C.ipynb](https://colab.research.google.com/drive/1XlfRxnlC1dmt2HoMj4BoVJiNLurVvWre?usp=sharing)">
+          <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+        </a>
 
- 허깅페이스 주소 &rarr; <https://huggingface.co/EUNHWA11/koalpaca_step_8000_hallym_DaAra>
+
+ 허깅페이스 주소 &rarr; 🤗<https://huggingface.co/EUNHWA11/koalpaca_step_8000_hallym_DaAra>
  
 
  -----------------------
@@ -103,3 +107,11 @@ fine-tunning code &rarr; <https://drive.google.com/file/d/1sGJOqHJOOthNo5KTPrjZZ
 |react-speech-recognition API|STT API, 마이크를 통해 음성인식 후 텍스트 입력 가능|
 |구글번역 API|4개국어(한국어, 영어, 중국어, 일본어)를 지원|
 |Flask API 프레임워크|인공지능 모델 개발 (Restful API로 요청과 응답을 Json 타입으로 통신하고, Json 값을 처리하여 사용자와 챗봇의 대화 내용을 웹에 출력하는 형태)|
+
+-------------------
+
+
+
+
+
+
