@@ -48,9 +48,10 @@ fine-tunning code &rarr; <https://drive.google.com/file/d/1sGJOqHJOOthNo5KTPrjZZ
 
  model load test code &rarr; <https://colab.research.google.com/drive/1XlfRxnlC1dmt2HoMj4BoVJiNLurVvWre?usp=sharing>
 
- <a style='display:inline' target="_blank" href="[https://colab.research.google.com/github/Beomi/KoAlpaca/blob/main/2023_06_08_PEFT%EB%A1%9CLoRA%EB%A1%9C%EB%93%9C.ipynb](https://colab.research.google.com/drive/1XlfRxnlC1dmt2HoMj4BoVJiNLurVvWre?usp=sharing)">
-          <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
-        </a>
+<a style='display:inline' target="_blank" href="https://colab.research.google.com/drive/1XlfRxnlC1dmt2HoMj4BoVJiNLurVvWre?usp=sharing">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
+
 
 
  허깅페이스 주소 &rarr; 🤗<https://huggingface.co/EUNHWA11/koalpaca_step_8000_hallym_DaAra>
