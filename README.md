@@ -23,9 +23,11 @@
 
 -----------------
 ### 1. 프로젝트 아키텍쳐
+
 <p align="center">
  <img src="https://github.com/Kimsuyeon0809/Hallym_Chat-bot/assets/171135177/1928fbc4-3a6e-456c-b097-4eebf92cb4e1">
 </p>
+
 -----------------
 
 ### 2. 한림 챗봇 Da-Ara의 Baseline Model
