@@ -117,6 +117,7 @@ fine-tunning code &darr;
 |Flask API 프레임워크|인공지능 모델 개발 (Restful API로 요청과 응답을 Json 타입으로 통신하고, Json 값을 처리하여 사용자와 챗봇의 대화 내용을 웹에 출력하는 형태)|
 
 -------------------
+<img width="186" alt="image" src="https://github.com/Kimsuyeon0809/Hallym_Chat-bot/assets/171135177/64cf2dd6-cd71-47cd-b4dc-730d235b7133">
 
 #### 팀원소개
 
@@ -125,8 +126,7 @@ fine-tunning code &darr;
     <tr>
       <td align="center">
        <a href="https://github.com/Kimsuyeon0809">
-        <img src="image" src="https://github.com/Kimsuyeon0809/Hallym_Chat-bot/assets/171135177/c3d348ba-932c-4390-9180-49f50e74de15">
-" width="100px;" alt=""/>
+        <img src="" width="100px;" alt=""/>
         <br />
         <sub><b>팀장 : 김수연 </b></sub></a><br /></td>
       <td align="center">
