@@ -15,7 +15,11 @@
 
  개인적인 차원에서는 정보를 찾기 어려워하는 학생들의 정보 접근에 대한 편리성을 제공합니다.
 
-출처 <<https://www.enterpriseappstoday.com/stats/chatgpt-statistics.html>>
+출처 
+
+분야 별 Open AI 활용 수 : <<https://www.enterpriseappstoday.com/stats/chatgpt-statistics.html>>
+
+한림대학교 혁신 기획서 : <<https://glocal.hallym.ac.kr/glocal_qna/announcement/announcement.do?mode=view&articleNo=56959&article.offset=10&articleLimit=10>>
 
 -----------------
 ### 1. 프로젝트 아키텍쳐
@@ -36,9 +40,11 @@
 
  Koalpaca의 크기가 커서 로컬에서 진행하기에는 큰 한계가 있습니다. 본 프로젝트에서는 구글 코랩(Colab) 프로 플러스 버전의 A100 GPU를 사용했습니다.
 
+ 
+
  -----------------------
 
- ### 4. 
+ ### 4. RAG
 
 
 
@@ -50,9 +56,9 @@
 한림대학교 챗봇 "DA-ARA" 구현화면 확인하기
 (https://hallym-daara.netlify.app/)
 
-----------------
 
-### 6. 모든 기능 소개
+
+#### 5-1. 모든 기능 소개
 > 1. 로그인 및 회원가입
 성명, 학번, 비밀번호, 학과 입력시 회원가입이 가능하다.
 학번과 비밀번호를 입력하여 로그인이 가능하다.
@@ -78,9 +84,9 @@
 한국어, 영어, 중국어, 일본어 총 4개 언어의 번역 기능을 제공한다. 해당 언어 클릭 시 현재까지의 대화 내용을 해당 언어로 번역할 수 있다.
 ![언어변경](https://github.com/Kimsuyeon0809/Hallym_Chat-bot/assets/108513967/313c864d-8cf1-44c4-a6d9-ed1c3ec1b686)
 
-----------------
 
-### 7. 사용API
+
+#### 5-2. 사용API
 |API|설명|
 |------|---|
 |SpeechSynthesis API|TTS API , 스피커를 통해 챗봇의 응답 음성 출력 가능|
