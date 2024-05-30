@@ -125,7 +125,7 @@ fine-tunning code &darr;
     <tr>
       <td align="center">
        <a href="https://github.com/Kimsuyeon0809">
-        <img src="<img width="186" alt="image" src="https://github.com/Kimsuyeon0809/Hallym_Chat-bot/assets/171135177/c3d348ba-932c-4390-9180-49f50e74de15">
+        <img src="image" src="https://github.com/Kimsuyeon0809/Hallym_Chat-bot/assets/171135177/c3d348ba-932c-4390-9180-49f50e74de15">
 " width="100px;" alt=""/>
         <br />
         <sub><b>팀장 : 김수연 </b></sub></a><br /></td>
