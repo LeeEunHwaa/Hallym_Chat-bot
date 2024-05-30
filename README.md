@@ -30,4 +30,8 @@
    - 토크나이저의 크기는 32,000으로 다양한 언어와 어휘를 포괄한다.
      
 <<https://huggingface.co/beomi/KoAlpaca-Polyglot-5.8B>>
+
+----------------
+### 3. Fine-tunning
+
  
