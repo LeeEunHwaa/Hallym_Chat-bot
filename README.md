@@ -24,7 +24,7 @@
 -----------------
 ### 1. 프로젝트 아키텍쳐
 <p align="center">
-![image](https://github.com/Kimsuyeon0809/Hallym_Chat-bot/assets/171135177/1928fbc4-3a6e-456c-b097-4eebf92cb4e1)
+ <img src="https://github.com/Kimsuyeon0809/Hallym_Chat-bot/assets/171135177/1928fbc4-3a6e-456c-b097-4eebf92cb4e1">
 </p>
 -----------------
 
