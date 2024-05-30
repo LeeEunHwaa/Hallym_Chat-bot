@@ -127,28 +127,28 @@ fine-tunning code &darr;
        <a href="https://github.com/Kimsuyeon0809">
         <img src="https://github.com/Kimsuyeon0809/Hallym_Chat-bot/assets/171135177/64cf2dd6-cd71-47cd-b4dc-730d235b7133" width="100px;" alt="Profile Image"/>
         <br />
-        <sub><b>팀장 : 김수연 </b></sub></a><br /></td>
+        <sub><b>팀장 : 김수연 AI </b></sub></a><br /></td>
       <td align="center">
        <a href="https://github.com/Gawon77">
         <img src="https://github.com/Kimsuyeon0809/Hallym_Chat-bot/assets/171135177/11836c83-35da-411e-ade1-e73b1d775fcb" width="100px;" alt="Profile Image"/>
         <br />
-        <sub><b>팀원 : 이가원 </b></sub></a><br /></td>
+        <sub><b>팀원 : 이가원 AI</b></sub></a><br /></td>
       <td align="center">
        <a href="https://github.com/LeeEunHwaa">
         <img src="https://github.com/Kimsuyeon0809/Hallym_Chat-bot/assets/171135177/e5407f50-3119-4872-a3fe-d3ac0dc0752f" width="100px;" alt="Profile Image"/>
         <br />
-        <sub><b>팀원 : 이은화 </b></sub></a><br /></td>
+        <sub><b>팀원 : 이은화 AI</b></sub></a><br /></td>
      <tr/>
       <td align="center">
        <a href="https://github.com/gwonbe">
         <img src="https://github.com/Kimsuyeon0809/Hallym_Chat-bot/assets/171135177/52bc6a72-d5cc-47b7-bd67-7114bdb76071" width="100px;" alt="Profile Image"/>
         <br />
-        <sub><b>팀원 : 신유진 </b></sub></a><br /></td>
+        <sub><b>팀원 : 신유진 WEB</b></sub></a><br /></td>
       <td align="center">
        <a href="https://github.com/YerinJi">
         <img src="https://github.com/Kimsuyeon0809/Hallym_Chat-bot/assets/171135177/2be8c004-6d71-4bee-a19b-91be66ef35c5" width="100px;" alt="Profile Image"/>
         <br />
-        <sub><b>팀원 : 지예린 </b></sub></a><br /></td>
+        <sub><b>팀원 : 지예린 WEB</b></sub></a><br /></td>
     </tr>
   </tbody>
 </table>
