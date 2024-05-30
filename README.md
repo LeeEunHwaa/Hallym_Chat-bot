@@ -38,9 +38,47 @@
 
  -----------------------
 
- ### 4. 웹팀
+ ### 4. 
 
 
 
 
  ------------------------
+
+
+### 5. 개발 화면 
+한림대학교 챗봇 "DA-ARA" 구현화면 확인하기
+(https://hallym-daara.netlify.app/)
+### 6. 모든 기능 소개
+> 1. 로그인 및 회원가입
+성명, 학번, 비밀번호, 학과 입력시 회원가입이 가능하다.
+학번과 비밀번호를 입력하여 로그인이 가능하다.
+![폼](https://github.com/Kimsuyeon0809/Hallym_Chat-bot/assets/108513967/4dd90a36-ca49-4719-9b47-3b0fb732c297)
+
+> 2. 메인페이지 (채팅)
+한림대학교에 대한 질문을 입력하는 메인페이지이다.
+![메인페이지](https://github.com/Kimsuyeon0809/Hallym_Chat-bot/assets/108513967/8f8629c8-1ef8-4cd6-8f42-d368ba4ad14e)
+
+> 3. 챗봇 응답 음성 출력
+우측 상단 스피커 아이콘으로 챗봇의 응답을 음성으로 출력할 수 있다.
+![스피커](https://github.com/Kimsuyeon0809/Hallym_Chat-bot/assets/108513967/982a6d6a-8dc7-4cd6-bb9d-a4604acb7a4a)
+
+> 4. 음성인식 텍스트 입력
+좌측 하단의 마이크 아이콘을 눌러 음성인식 텍스트 입력이 가능하다.
+![음성인식](https://github.com/Kimsuyeon0809/Hallym_Chat-bot/assets/108513967/945be1b0-c9da-4557-a965-ca05c5be6abc)
+
+> 5. 이용가이드
+한림대학교 챗봇 "DA-ARA" 이용가이드 
+![이용가이드](https://github.com/Kimsuyeon0809/Hallym_Chat-bot/assets/108513967/0fe0a3be-a9d6-4e91-8e72-3a7b99d0e5a7)
+
+> 6. 언어변경
+한국어, 영어, 중국어, 일본어 총 4개 언어의 번역 기능을 제공한다. 해당 언어 클릭 시 현재까지의 대화 내용을 해당 언어로 번역할 수 있다.
+![언어변경](https://github.com/Kimsuyeon0809/Hallym_Chat-bot/assets/108513967/313c864d-8cf1-44c4-a6d9-ed1c3ec1b686)
+
+### 7. 사용API
+|API|설명|
+|------|---|
+|SpeechSynthesis API|TTS API , 스피커를 통해 챗봇의 응답 음성 출력 가능|
+|react-speech-recognition API|STT API, 마이크를 통해 음성인식 후 텍스트 입력 가능|
+|구글번역 API|4개국어(한국어, 영어, 중국어, 일본어)를 지원|
+|Flask API 프레임워크|인공지능 모델 개발 (Restful API로 요청과 응답을 Json 타입으로 통신하고, Json 값을 처리하여 사용자와 챗봇의 대화 내용을 웹에 출력하는 형태)|
