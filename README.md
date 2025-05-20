@@ -79,6 +79,8 @@ LLM이 질문 주제에 따라 검색하는 데이터를 구분해주기 위해,
 
 #### 4-3. LLM 질의응답 
 질문이 입력되면, LLM은 질문과 관련된 tool을 사용하여 답변을 생성한다. 모델은 아래 프롬프트 구조를 사용하여, 검색 내용을 바탕으로 최종 답변을 생성한다.
+
+
     """
     Please provide answer for question from the following context. 
     ---
@@ -86,6 +88,7 @@ LLM이 질문 주제에 따라 검색하는 데이터를 구분해주기 위해,
     ---
     Context: {context}
     """
+
 
  이 때 Question은 사용자가 한 질문을, Context는 검색된 내용이다.
 
